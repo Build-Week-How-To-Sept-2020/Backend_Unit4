@@ -4,9 +4,10 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"server": "nodemon index.js",
-		"start": "node index.js"
-	},
+        "server": "nodemon index.js",
+        "start": "node index.js",
+        "watch": "nodemon --require dotenv/config index.js"
+    },
 	"repository": {
 	  "type": "git",
 	  "url": "git+https://github.com/Build-Week-How-To-Sept-2020/Backend_Unit4.git"
