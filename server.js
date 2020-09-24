@@ -7,9 +7,10 @@ const authRouter = require("./auth/auth-router");
 const postsRouter = require("./posts/posts-router")
 
 const server = express();
+server.use(express.json());
 server.use(helmet());
 server.use(cors());
-server.use(express.json());
+
 server.use(logger())
 
 server.use("/api/users", usersRouter);
