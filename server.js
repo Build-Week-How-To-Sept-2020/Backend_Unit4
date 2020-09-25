@@ -17,6 +17,6 @@ server.use("/api/users", usersRouter);
 server.use("/api/auth", authRouter);
 server.use("/api/users/:id/posts", postsRouter);
 
-server.get("/", (req, res) => res.json({ api: "up" }));
+server.get("/", (req, res) => res.status(200).json({ api: "up" }));
 
 module.exports = server;  
