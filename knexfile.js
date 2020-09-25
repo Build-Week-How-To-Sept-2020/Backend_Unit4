@@ -1,8 +1,8 @@
 module.exports = {
   production: {
-    client: 'sqlite3',
+    client: "sqlite3",
     connection: {
-      filename: './database/auth.db3',
+      filename: "./database/auth.db3",
     },
     useNullAsDefault: true,
     migrations: {
@@ -16,7 +16,5 @@ module.exports = {
         conn.run("PRAGMA foreign_keys = ON", done);
       },
     },
-  }
-
-
+  },
 };
