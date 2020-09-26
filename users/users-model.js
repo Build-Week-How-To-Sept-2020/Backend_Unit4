@@ -4,7 +4,8 @@ module.exports = {
     find,
     findBy,
     findById,
-    add
+    add,
+    getUsers
 }
 
 function find() {
@@ -26,3 +27,7 @@ function add(user) {
                 return findBy({username: user.username});
             });
 }  
+
+function getUsers(){
+    return db("Users").select("id", "Username", "Email", "Joined")
+}
