@@ -1,5 +1,5 @@
 module.exports = {
-  development: {
+  production: {
     client: "sqlite3",
     connection: {
       filename: "./database/auth.db3",
