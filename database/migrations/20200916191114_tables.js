@@ -11,11 +11,14 @@ exports.up = function(knex) {
     tbl.increments();
     tbl.text("title");
     tbl.text("contents");
-    tbl.integer("user_id")
-        .references("id")
-        .inTable("users")
-        .onDelete("CASCADE")
-        .onUpdate("CASCADE")
+    tbl
+      .integer("user_id")
+      .unsigned()
+      .notNullable()
+      .references("id")
+      .inTable("users")
+      .onUpdate("CASCADE")
+      .onDelete("CASCADE");
     tbl.datetime("created").defaultTo(knex.raw("current_timestamp"));
   });
 };
