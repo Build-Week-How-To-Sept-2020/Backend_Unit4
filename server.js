@@ -14,10 +14,10 @@ server.use(cors());
 
 server.use(logger())
 
-server.use("/api/users", restricted, usersRouter);
+server.use("/api/users", usersRouter);
 server.use("/api/auth", authRouter);
 server.use("/api/users/:id/posts", restricted, postsRouter);
-server.use("/api/posts", restricted, postsRouter);
+server.use("/api/posts", postsRouter);
 
 server.get("/", (req, res) => res.status(200).json({ api: "up" }));
 
